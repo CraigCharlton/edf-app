@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <img alt="EDF Logo" class="main-logo" src="./assets/EDFLogo.png">
-    <Home title="Home"/>
+    <Header />
+    <router-view/>
   </div>
 </template>
 
 <script>
-import Home from './components/Home.vue'
+import Header from './components/layout/Header.vue'
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    Home
+    Header
   }
 }
 </script>
@@ -21,12 +21,10 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 
-.main-logo {
-  max-width: 250px;
+* {
+  margin: 0;
 }
 </style>
