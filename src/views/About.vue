@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <img alt="EDF Logo" class="main-logo" src="../assets/EDFLogo.png" />
+    <img alt="EDF Logo" class="main-logo" src="../assets/EDFIronRainLogo.png" />
     <h1>About</h1>
     <p>EDF lists from Craig</p>
   </div>
