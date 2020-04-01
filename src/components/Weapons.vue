@@ -17,10 +17,11 @@
       <input />
     </div>
     <div class="submit">
-      <button>Submit</button>
+      <button v-on:click="getWeaponData">Submit</button>
     </div>
     <div class="results">
       <input type="text" value="Results" />
+      <div>{{weaponsDataList}}</div>
     </div>
   </div>
 </template>
@@ -30,6 +31,21 @@ export default {
   name: 'Weapons',
   props: {
     msg: String
+  },
+  data() {
+    return {
+      weaponsDataList: []
+    };
+  },
+  methods: {
+    getWeaponData() {
+      fetch("EDF4-1-Weapons.json")
+        .then(response => response.json())
+        .then(data => (this.weaponsDataList = data))
+        .catch(error => {
+          console.log(error);
+        });
+    }
   }
 }
 </script>

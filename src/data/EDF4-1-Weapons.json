@@ -1,0 +1,26 @@
+[
+  {
+    "name": "AF14",
+    "level": "0",
+    "type": "Assault_Rifle",
+    "class": "Ranger"
+  },
+  {
+    "name": "AF14-RA",
+    "level": "1",
+    "type": "Assault_Rifle",
+    "class": "Ranger"
+  },
+  {
+    "name": "Stingray_M1",
+    "level": "0",
+    "type": "Rocket_Launcher",
+    "class": "Ranger"
+  },
+  {
+    "name": "Rapier",
+    "level": "0",
+    "type": "Short_Range",
+    "class": "Wing_Diver"
+  }
+]
