@@ -17,16 +17,16 @@
       <input />
     </div>
     <div class="submit">
-      <button v-on:click="getWeaponData">Submit</button>
+      <button>Submit</button>
     </div>
     <div class="results">
-      <input type="text" value="Results" />
-      <div>{{weaponsDataList}}</div>
+      <li v-for="weapon in weapons" v-bind:key="weapon.name">{{weapon.name}}</li>
     </div>
   </div>
 </template>
 
 <script>
+import Weapons from '../data/EDF4-1-Weapons.json'
 export default {
   name: 'Weapons',
   props: {
@@ -34,18 +34,8 @@ export default {
   },
   data() {
     return {
-      weaponsDataList: []
+      weapons: Weapons
     };
-  },
-  methods: {
-    getWeaponData() {
-      fetch("EDF4-1-Weapons.json")
-        .then(response => response.json())
-        .then(data => (this.weaponsDataList = data))
-        .catch(error => {
-          console.log(error);
-        });
-    }
   }
 }
 </script>
